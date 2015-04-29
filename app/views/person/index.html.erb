@@ -4,7 +4,9 @@
     <tbody>
       <% @persons.each do |person| %>
         <tr>
-          <%= render 'person' %>
+
+	        <td><%= link_to person.name, person %></td>
+			<td><%= person.email %></td>
         </tr>
       <% end %>
     </tbody>
