@@ -2,7 +2,7 @@
 
 <% @pens.each do |pen| %>
   <p>
-    <%= pen.name %>
+    <%= link_to pen.name, pen_path(pen.id) %>
     <%= pen.capacity %>
   </p>
 <% end %>

@@ -1,0 +1,13 @@
+<%= form_for @pen, :url => pen_path do |p| %>
+  <p>
+    <%= p.label :name, "Pen Name" %>
+    <%= p.text_field :name %>
+  </p>
+  <p>
+    <%= p.label :capacity, "Pen Capacity" %>
+    <%= p.text_field :capacity %>
+  </p>
+  <p>
+    <%= p.submit "Change my pen!" %>
+  </p>
+<% end %>

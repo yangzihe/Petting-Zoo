@@ -1,0 +1,22 @@
+Pen <%= @pen.name %>
+<br>
+<%= link_to 'Renovate', edit_pen_path(@pen) %>
+<br>
+<%= link_to 'Demolish', pen_path(@pen), method: :delete %>
+
+<p>
+Animals
+</p>
+<p>
+<% @pen.animals.each do |a| %>
+<%= a.species %>
+<%= a.energy %>
+<br>
+<% end %>
+</p>
+<p>
+<%= link_to 'Add an animal to this pen', new_pen_animal_path(params[:id]) %>
+</p>
+<p>
+<%= link_to 'Back to all pens', pen_index_path %>
+</p>

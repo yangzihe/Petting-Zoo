@@ -11,17 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150429071410) do
+ActiveRecord::Schema.define(version: 20150429150052) do
 
   create_table "animals", force: :cascade do |t|
     t.string   "species"
     t.integer  "energy"
-    t.integer  "pens_id"
+    t.integer  "pen_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  add_index "animals", ["pens_id"], name: "index_animals_on_pens_id"
+  add_index "animals", ["pen_id"], name: "index_animals_on_pen_id"
 
   create_table "interactions", force: :cascade do |t|
     t.string   "action"

@@ -1,0 +1,9 @@
+<%= form_for([@pen, @animal]) do |a| %>
+  <p>
+    <%= a.label :species, "Animal Species" %>
+    <%= a.text_field :species %>
+  </p>
+  <p>
+    <%= a.submit "Breed" %>
+  </p>
+<% end %>

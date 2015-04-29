@@ -4,7 +4,7 @@ class CreateAnimals < ActiveRecord::Migration
     create_table :animals do |t|
       t.string :species
       t.integer :energy
-      t.references :pens, index: true
+      t.references :pen, index: true
 
       t.timestamps null: false
     end

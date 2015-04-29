@@ -3,9 +3,9 @@
 one:
   species: MyString
   energy: 1
-  pens_id: 
+  pen_id: 
 
 two:
   species: MyString
   energy: 1
-  pens_id: 
+  pen_id: 
