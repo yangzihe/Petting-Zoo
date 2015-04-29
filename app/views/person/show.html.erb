@@ -9,11 +9,11 @@
 	<ul>
 		<% @person.interactions.each do |interaction| %>
 		<%= if interaction.action == 'pet' %>
-			<li><% @person.name %> petted <% interaction.animal %></li>
+			<li><% @person.name %> petted <% interaction.animal.name %></li>
 		<%= elsif interaction.action == 'play with' %> 
-			<li><% @person.name %> played with <% interaction.animal %></li>
+			<li><% @person.name %> played with <% interaction.animal.name %></li>
 		<%= elsif interaction.action == 'take a selfie' %>
-			<li><% @person.name %> took a selfie with <% interaction.animal %></li>
+			<li><% @person.name %> took a selfie with <% interaction.animal.name %></li>
 		<%= end %>
 	</ul> 
 
