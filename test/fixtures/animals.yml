@@ -2,8 +2,10 @@
 
 one:
   species: MyString
-  energy: 
+  energy: 1
+  pens_id: 
 
 two:
   species: MyString
-  energy: 
+  energy: 1
+  pens_id: 

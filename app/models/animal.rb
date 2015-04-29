@@ -1,4 +1,3 @@
 class Animal < ActiveRecord::Base
-	belongs_to :pen
+  belongs_to :pens
 end
- 
