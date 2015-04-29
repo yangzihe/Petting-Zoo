@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150418011410) do
+ActiveRecord::Schema.define(version: 20150429062212) do
 
   create_table "animals", force: :cascade do |t|
     t.string   "species"
@@ -22,7 +22,6 @@ ActiveRecord::Schema.define(version: 20150418011410) do
 
   create_table "interactions", force: :cascade do |t|
     t.string   "action"
-    t.string   "animal"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

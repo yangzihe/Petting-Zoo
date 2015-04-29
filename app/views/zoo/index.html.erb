@@ -4,7 +4,7 @@
 <div class="body">
   <h1>Welcome to our Petting Zoo!</h1>
 
-  <% @interactions.do |i| %>
+  <% @interactions.each do |i| %>
     <% if i.action == 'pet' %>
       <%= i.person.name %> petted a <%= i.animal %>
     <% elsif i.action == 'play with' %>
