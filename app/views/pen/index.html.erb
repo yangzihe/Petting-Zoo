@@ -1,0 +1,16 @@
+<h3>Pens</h3>
+
+<% @pens.each do |pen| %>
+  <p>
+    <%= pen.name %>
+    <%= pen.capacity %>
+  </p>
+<% end %>
+
+<p>
+  <%= link_to 'New Pen', new_pen_path %>
+</p>
+
+<p>
+  <%= link_to 'Back to Homepage', root_path %>
+</p>
