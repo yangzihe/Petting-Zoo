@@ -17,4 +17,7 @@ Rails.application.routes.draw do
     resources :animals
   end
 
+
+  resources :person
+
 end
