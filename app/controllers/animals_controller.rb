@@ -34,4 +34,8 @@ def delete
     redirect_to pen_path(id: current_pen.id)
 end
 
+def index 
+	@animals = Animal.all
+end 
+
 end
