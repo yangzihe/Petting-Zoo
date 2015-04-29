@@ -4,6 +4,16 @@
 <div class="body">
   <h1>Welcome to our Petting Zoo!</h1>
 
+  <% @interactions.do |i| %>
+    <% if i.action == 'pet' %>
+      <%= i.person.name %> petted a <%= i.animal %>
+    <% elsif i.action == 'play with' %>
+      <%= i.person.name %> played with a <%= i.animal %>
+    <% elsif i.action == 'take a selfie with' %>
+      <%= i.person.name %> took a selfie with a <%= i.animal %>
+    <% end %>
+  <% end %>
+
   <h3><%= link_to 'Pens', pen_path %></h3>
 
   <h3>Visitors</h3>
