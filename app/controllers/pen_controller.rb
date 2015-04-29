@@ -11,6 +11,10 @@ class PenController < ApplicationController
     @pen = Pen.new
   end
 
+  def edit
+    @pen = Pen.find(params[:id])
+  end
+
   def create
     @pen = Pen.new(pen_params)
     if @pen.save
@@ -20,10 +24,17 @@ class PenController < ApplicationController
     end
   end
 
-  def edit
+  def update
+    @pen = Pen.find(params[:id])
+    if @pen.update(pen_params)
+      redirect_to @pen
+    end
   end
 
-  def delete
+  def destroy
+    @pen = Pen.find(params[:id])
+    @pen.destroy
+    redirect_to pen_index_path
   end
 
   private
