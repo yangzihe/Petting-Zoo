@@ -1,0 +1,11 @@
+<!-- list of persons and links -->
+
+<h3>People</h3>
+    <tbody>
+      <% @persons.each do |person| %>
+        <tr>
+          <%= render person %>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>

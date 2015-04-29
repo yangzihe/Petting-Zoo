@@ -1,0 +1,16 @@
+<!-- Display person's name, email AND list of interactions -->
+<h3>Person</h3>
+<p>Name: <%= @person.name if @person.name %></p>
+<p>Email: <%= @person.email if @person.email %></p>
+
+<!-- how to get list of interactions of person? -->
+
+<h4>Interactions</h4>
+	<ul>
+		<% @person.interactions.each do |interaction| %>
+		<li>Interaction: <%= interaction.action %></li><br>
+		Animal: <%= interaction.animal %>
+	</ul> 
+
+
+
