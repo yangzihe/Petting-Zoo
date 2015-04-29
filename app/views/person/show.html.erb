@@ -7,7 +7,8 @@
 
 <h4>Interactions</h4>
 	<ul>
-		<% @person.interactions.each do |interaction| %>
+		<% @interactions = Interaction.where(person: @person) %>
+		<% @interactions.each do |interaction| %>
 			<%= if interaction.action == 'pet' %>
 				<li><% @person.name %> petted <% interaction.animal.name %></li>
 			<%= elsif interaction.action == 'play with' %> 
