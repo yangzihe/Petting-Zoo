@@ -6,6 +6,7 @@ class PersonController < ApplicationController
 
 	def show
 		@person = Person.find(params[:id])
+    @interactions = Interaction.where(person: @person)
 	end
 	
 end
