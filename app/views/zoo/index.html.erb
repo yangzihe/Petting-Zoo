@@ -4,6 +4,10 @@
 <div class="body">
   <h1>Welcome to our Petting Zoo!</h1>
 
+  <h3><%= link_to 'Pens', pen_index_path %></h3>
+
+  <h3><%= link_to 'Visitors', person_index_path %></h3>
+  
   <% @interactions.each do |i| %>
     <% if i.action == 'pet' %>
       <%= i.person.name %> petted a <%= i.animal %>
@@ -14,7 +18,5 @@
     <% end %>
   <% end %>
 
-  <h3><%= link_to 'Pens', pen_index_path %></h3>
 
-  <h3>Visitors</h3>
 </div>
