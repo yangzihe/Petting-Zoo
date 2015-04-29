@@ -9,6 +9,8 @@ Rails.application.routes.draw do
 
   #get 'animals', to: 'animals#index'
 
+  devise_for :persons
+  get 'person', to: 'person#index'
 
   resources :pen
 end
