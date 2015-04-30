@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root to: 'zoo#index'
   get 'pen/new', to: 'pen#new'
   post 'pen/create', to: 'pen#create'
+  patch 'animals/feed', to: 'animals#feed'
 
 
   resources :pen do

@@ -1,15 +1,28 @@
 <h3>Pens</h3>
 
-<% @pens.each do |pen| %>
-  <p>
+<table>
+  <tr>
+    <th>Pen Name</th>
+    <th>Pen Capacity</th>
+  </tr>
+  <% @pens.each do |pen| %>
+  <tr>
+    <td>
     <%= link_to pen.name, pen_path(pen.id) %>
+  </td>
+  <td>
     <%= pen.capacity %>
+  </td>
+</tr>
   </p>
 <% end %>
+</table>
 
-<p>
-  <%= link_to 'New Pen', pen_new_path %>
-</p>
+<% if can? :manage, :Pen %>
+  <p>
+    <%= link_to 'New Pen', pen_new_path %>
+  </p>
+<% end %>
 
 <p>
   <%= link_to 'Back to Homepage', root_path %>

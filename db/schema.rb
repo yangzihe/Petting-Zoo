@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150430043125) do
+ActiveRecord::Schema.define(version: 20150430053627) do
 
   create_table "animals", force: :cascade do |t|
     t.string   "species"
@@ -54,6 +54,7 @@ ActiveRecord::Schema.define(version: 20150430043125) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
+    t.boolean  "zookeeper"
   end
 
   add_index "people", ["email"], name: "index_people_on_email", unique: true

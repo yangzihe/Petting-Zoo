@@ -1,12 +1,13 @@
 <!-- list of persons and links -->
-<div class="navbar">
-  <p>Login</p>
-</div>
 <div class="body">
 <h1>People</h1>
 
 	<table>
     <tbody>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+      </tr>
       <% @persons.each do |person| %>
         <tr>
 	        <td><%= link_to person.name, person %></td>

@@ -27,14 +27,11 @@ class AnimalsController < ApplicationController
 	end
 
 	def feed
-		@pen = Pen.find(params[:pen_id])
-		@animal = Animal.find(params[:id])
-		if @animal.health < 10
-			@animal.update_attribute(:health, @animal.health + 3)
-			if @animal.save
-				redirect_to pen_path(@pen)
-			end
+		@animal = Animal.find(params[:animal])
+		if @animal.energy < 10
+			@animal.energy = @animal.energy + 3
 		end
+		redirect_to :back
 	end
 
 # pet in visitor controller? decreases animal energy

@@ -18,3 +18,6 @@ end
 %w(Bob Jill BillyBob Jackie Eric Yangzi Rachel).each do |name|
   Person.create name: name, email: name+"@zoo.com", password: 'password'
 end
+
+# Make zookeeper
+Person.create name: 'Howard', email: "Howard@zoo.com", password: 'password', zookeeper: true

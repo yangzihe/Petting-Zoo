@@ -1,26 +1,49 @@
 Pen <%= @pen.name %>
-<br>
-  <%= link_to 'Renovate', edit_pen_path(@pen) %>
-<br>
-  <%= link_to 'Demolish', pen_path(@pen), method: :delete %>
+<% if can? :manage, :Pen %>
+  <br>
+    <%= link_to 'Renovate', edit_pen_path(@pen) %>
+  <br>
+    <%= link_to 'Demolish', pen_path(@pen), method: :delete %>
+<% end %>
 
-<p>
-  Animals
-</p>
-<p>
+<table>
+  <tr>
+    <th>Species</th>
+    <th>Energy</th>
+    <th>Interaction</th>
+    <th>Feed</th>
+  </tr>
   <% @pen.animals.each do |a| %>
-    <%= a.species %>
-    <%= a.energy %>
-    <%= form_tag(interactions_create_path(animal: a), method: 'post') do %>
-      <%= select_tag(:act, options_for_select(@interacts)) %>
-      <%= submit_tag "Interact!", name: nil, class: 'button medium' %>
-    <% end %> 
-    <br>
+    <tr>
+      <td>  
+        <%= a.species %>
+      </td>
+      <% if can? :manage, :Animal %>
+      <td>
+        <%= a.energy %>
+      </td>
+    <% end %>
+    <% if a.energy > 0 %>
+      <td>
+        <%= form_tag(interactions_create_path(animal: a), method: 'post') do %>
+          <%= select_tag(:act, options_for_select(@interacts)) %>
+          <%= submit_tag "Interact!", name: nil, class: 'button medium' %>
+        <% end %>
+      </td>
+    <% end %>
+    <% if can? :manage, :Animal %>
+      <td>
+        <%= button_to 'Feed!', animals_feed_path(animal: a), method: 'patch' %>
+      </td>
+    <% end %>
   <% end %>
-</p>
-<p>
-  <%= link_to 'Add an animal to this pen', new_pen_animal_path(params[:id]) %>
-</p>
+  </tr>
+</table>
+<% if can? :manage, :Animal %>
+  <p>
+    <%= link_to 'Add an animal to this pen', new_pen_animal_path(params[:id]) %>
+  </p>
+<% end %>
 <p>
   <%= link_to 'Back to all pens', pen_index_path %>
 </p>
