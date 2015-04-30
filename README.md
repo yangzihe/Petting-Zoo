@@ -1,76 +1,23 @@
-VIEWS
-=====
+**Title:** Petting-Zoo  <br />
+**Team Members:** Yangzi He, Jackie Kim, Rachel Lee, Eric Zhao  <br />
+**Demo Link:** Video????   <br />
+**Idea:** A game that allows people to visit a petting zoo and interact with the different animals in each pen  <br />
+**Models and Description:**  <br />
+*Person* <br />
+has name, email and many interactions <br />
+certain People are Zookeepers with administrative access <br />
+*Pen*   <br />
+has name, capacity, and many animals   <br />
+*Animal*   <br />
+has species, energy, pen_id and belongs to a pen <br />
+*Interaction*  <br />
+has act and belongs to a person  <br />
+**Features:**  <br />
+Users can log in    <br />
+Zookeepers can restore animals' energy   <br />
+**Division of Labor:**   <br />
+Yangzi:  <br />
+Jackie: made animal model & controller, made the write-up  <br />
+Rachel:  made the person model & controller<br />
+Eric:  <br />
 
-Home page (index.html)
-----------------------
-
-  * list of interactions
-  * links to visitors
-  * links to pens
-
-Pens
-----
-
-### Pen (pen/index.html)
-
-  * list of animals and their stats
-  * each animal:
-    * dropdown menu to select interaction
-    * submit button
-
-### Pens (pen/show.html)
-
-  * list of pens with name # of animals in each
-
-Persons
---------
-
-### Persons (person/index.html)
-
-  * list of persons and links
-
-### Person (person/show.html)
-
-  * display person's name, email
-  * list of interactions
-
-
-CONTROLLERS
-===========
-
-pens_controller
----------------
-
-  **index** - displays all pens
-
-  **show** - gets id of pen and displays animals in pen
-
-  **new** - form in html
-
-  **create** - creates the pen by taking in name, max occupancy
-
-
-animals_controller
-------------------
-
-  **new** - form for new animal
-
-  **create** - creates the animal by taking in species
-
-  **feed** - adds energy to animal
-
-  **delete** - destroys animal
-
-
-persons_controller
-------------------
-
-  **index** - displays all persons
-
-  **show** - gets id of person and shows interactions of that person
-
-
-interactions_controller
------------------------
-
-  **create** - takes in animal, current person, and interaction selected
