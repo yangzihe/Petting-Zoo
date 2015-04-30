@@ -1,7 +1,7 @@
 **Title:** Petting-Zoo  <br />
 **Team Members:** Yangzi He, Jackie Kim, Rachel Lee, Eric Zhao  <br />
 [**Demo Link**](https://drive.google.com/file/d/0B7tY2oHWptXOb0Q4Y0ZRWTd6cE0/view?usp=sharing)   <br />
-[**Heroku**](https://glacial-citadel-1688.herokuapp.com/)
+[**Heroku**](https://glacial-citadel-1688.herokuapp.com/) <br />
 **Idea:** A game that allows people to visit a petting zoo and interact with the different animals in each pen  <br />
 **Models and Description:**  <br />
 *Person* <br />
