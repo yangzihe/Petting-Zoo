@@ -30,11 +30,13 @@ class Ability
     # https://github.com/CanCanCommunity/cancancan/wiki/Defining-Abilities
     user ||= Person.new 
     if user.admin?
-        can :manage, :all
+        can :manage, :Animal
+        can :manage, :Pen
     else
-        can :read, :all
+        can :read, :Animal
+        can :read, :Pen
     end
-    alias_action :create, :update, :destroy, to: :crud
-    can :crud, Quit, user_id: user.id
+    alias_action :create, :read, :update, :destroy, to: :crud
+    can :crud, Interaction, user_id: user.id
   end
 end

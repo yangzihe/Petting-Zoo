@@ -6,17 +6,19 @@
 <!-- how to get list of interactions of person? -->
 
 <h4>Interactions</h4>
-	<ul>
-		<% @interactions.each do |interaction| %>
-			<% if interaction.action == 'pet' %>
-				<li><%= @person.name %> petted <%= interaction.animal.name %></li>
-			<% elsif interaction.action == 'play with' %> 
-				<li><%= @person.name %> played with <%= interaction.animal.name %></li>
-			<% elsif interaction.action == 'take a selfie with' %>
-				<li><%= @person.name %> took a selfie with <%= interaction.animal.name %></li>
-			<% end %>
+<ul>
+	<% @interactions.each do |interaction| %>
+		<% if interaction.act == 'pet' %>
+			<li><%= @person.name %> petted a <%= interaction.animal %></li>
+		<% elsif interaction.act == 'play with' %> 
+			<li><%= @person.name %> played with a <%= interaction.animal %></li>
+		<% elsif interaction.act == 'take a selfie with' %>
+			<li><%= @person.name %> took a selfie with a <%= interaction.animal %></li>
+		<% else %>
+			<li><%= @person.name %> interacted with a <%= interaction.animal %></li>
 		<% end %>
-	</ul> 
+	<% end %>
+</ul> 
 
 
 

@@ -21,7 +21,7 @@ class AnimalsController < ApplicationController
 				flash[:error] = @animal.errors.full_messages.to_sentence
 			end
 		else
-			redirect_topen_path(@pen)
+			redirect_to pen_path(@pen)
 			flash[:error] = 'This pen is full. You cannot add any more animals to it.'
 		end
 	end

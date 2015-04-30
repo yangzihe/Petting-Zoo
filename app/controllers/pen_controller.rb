@@ -5,6 +5,7 @@ class PenController < ApplicationController
 
   def show
     @pen = Pen.find(params[:id])
+    @interacts = [['pet', 'pet'], ['play with', 'play with'], ['take a selfie with', 'take a selfie with']]
   end
 
   def new
@@ -18,7 +19,7 @@ class PenController < ApplicationController
   def create
     @pen = Pen.new(pen_params)
     if @pen.save
-      redirect_to pen_path
+      redirect_to pen_path(@pen.id)
     else
       redirect_to new_pen_path
     end

@@ -4,9 +4,10 @@ class InteractionsController < ApplicationController
     @interaction = Interaction.create(interaction_params)
     @interaction.person = current_person
     @animal = Animal.find(params[:animal])
-    @interaction.animal = @animal
+    @interaction.animal = @animal.species
     if @interaction.save
       @animal.energy = @animal.energy - 2
+      @animal.save
       redirect_to :back
     else
       redirect_to :back
@@ -14,7 +15,7 @@ class InteractionsController < ApplicationController
   end
 
   def interaction_params
-    params.require(:interaction).permit(:action)
+    params.permit(:act)
   end
 
 end
