@@ -30,6 +30,7 @@ class AnimalsController < ApplicationController
 		@animal = Animal.find(params[:animal])
 		if @animal.energy < 10
 			@animal.energy = @animal.energy + 3
+			@animal.save
 		end
 		redirect_to :back
 	end
