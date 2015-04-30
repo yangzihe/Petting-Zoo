@@ -4,7 +4,9 @@
   <h3><%= link_to 'Pens', pen_index_path %></h3>
 
   <h3><%= link_to 'Visitors', person_index_path %></h3>
- 
+  <br>
+  <h4>Your Newsfeed</h4>
+<body>
   <ul>
     <% Interaction.all.each do |i| %>
       <% if i.act == 'pet' %>
@@ -16,5 +18,7 @@
       <% end %>
     <% end %>
   </ul>
+</body>
+
 
 </div>
