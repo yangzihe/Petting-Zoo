@@ -1,6 +1,6 @@
-Title: Petting-Zoo
-Team Members: Yangzi He, Jackie Kim, Rachel Lee, Eric Zhao
-Demo Link: Video????
+Title: Petting-Zoo  <br />
+Team Members: Yangzi He, Jackie Kim, Rachel Lee, Eric Zhao  <br />
+Demo Link: Video????   <br />
 Idea: A game that allows people to visit a petting zoo and interact with the different animals there 
 Models and Description: 
 Person
