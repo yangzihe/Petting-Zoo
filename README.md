@@ -18,6 +18,6 @@ Zookeepers can restore animals' energy   <br />
 **Division of Labor:**   <br />
 Yangzi:  <br />
 Jackie: made animal model & controller, made the write-up  <br />
-Rachel:  <br />
+Rachel:  made the person model & controller<br />
 Eric:  <br />
 
