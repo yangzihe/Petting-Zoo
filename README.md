@@ -16,7 +16,7 @@ has act and belongs to a person  <br />
 Users can log in    <br />
 Zookeepers can restore animals' energy   <br />
 **Division of Labor:**   <br />
-Yangzi:  <br />
+Yangzi:  made pen model and controller, and integrated animals into the views of individual pens. Added CRUD operations for Pens.<br />
 Jackie: made animal model & controller, made the write-up  <br />
 Rachel:  made the person model & controller, 2 minute video<br />
 Eric:  <br />
