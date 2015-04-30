@@ -14,7 +14,8 @@ gem 'coffee-rails', '~> 4.1.0'
 
 # Use Devise for user authenticaiton
 gem 'devise'
-
+# Admin authorization
+gem 'cancancan', '~> 1.10'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
@@ -25,6 +26,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 # Validates email
 gem 'valid_email'
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -46,13 +48,11 @@ group :development, :test do
   gem 'spring'
 
   # Gems to help development
-  gem 'cancancan', '~> 1.10'
   gem 'sqlite3'
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'quiet_assets'
   gem 'rails_layout'
-  gem 'web-console', '~> 2.0'
 end
 
 group :production do
